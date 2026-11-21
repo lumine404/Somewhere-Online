@@ -81,7 +81,73 @@ nav ul {
 }
 
 .nav-item:hover {
-    background-color: var(--olive-color);
+    background-color: var(--charcoal-color);
     transition: 0.3s;
 }
 
+.nav-item:hover a {
+    color: var(--cream-color);
+    transition: 0.3s;
+}
+
+.faq-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px 24px 20px 0;
+    background-color: var(--olive-color);
+    color: var(--charcoal-color);
+    
+}
+
+.faq-intro{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.faq-list li {
+    list-style: none;
+    background-color: var(--cream-color);
+    border : 1px solid var(--charcoal-color);
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+
+.faq-question {
+    appearance: none;
+    width: 100%;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px 16px;
+    
+}
+
+.faq-answer {
+    display: none;
+    padding: 20px 10px;
+}
+.faq-answer.show {
+    border-top: 1px solid var(--charcoal-color);
+    display: block;
+    
+}
+
+@media (max-width: 768px) {
+    .faq-section {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
