@@ -14,6 +14,7 @@
 
 body{
     background-color: var(--cream-color);
+    overflow-x: clip;
 }
 
 .site-header {
@@ -31,8 +32,10 @@ body{
 
 .header-inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 12px;
     padding: 15px 20px;
     background-color: var(--cream-color);
     border-bottom: 1px solid var(--charcoal-color);
@@ -59,7 +62,8 @@ body{
 
 nav ul {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -73,6 +77,7 @@ nav ul {
     align-items: center;
     border-radius: 999px;
     border: 1px solid var(--charcoal-color);
+    white-space: nowrap;
 }
 
 .nav-item a{
@@ -150,4 +155,74 @@ nav ul {
         grid-template-columns: 1fr;
         padding: 20px;
     }
+}
+
+#discover {
+    background-color: var(--charcoal-color);
+    color: var(--cream-color);
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+.discover-heading {
+    text-align: left;
+    padding: 20px 20px;
+}
+
+.marquee-container {
+    overflow: hidden;
+    padding: 12px 0;
+}
+
+.marquee-track {
+    display: flex;
+}
+
+.marquee-group {
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+    flex-shrink: 0;
+}
+.marquee-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 0 0 auto;
+    text-align: left;
+    text-decoration: none;
+    color: var(--charcoal-color);
+    background-color: var(--pink-color);
+    border: 1px solid var(--charcoal-color);
+    border-radius:22px;
+    padding: 10px 12px 14px;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.marquee-item:hover {
+    background-color: var(--sage-color);
+    transform: translateY(-3px);
+}
+
+.marquee-item span {
+    align-self: flex-start;
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background-color: var(--charcoal-color);
+    border: 1px solid var(--charcoal-color);
+    color: var(--cream-color);
+}
+.marquee-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid var(--charcoal-color);
+}
+
+.marquee-item h3 {
+    font-size: 1.05rem;
+    line-height: 1.25;
+    padding: 0 2px;
 }
